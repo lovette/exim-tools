@@ -1,0 +1,3 @@
+127.0.0.1 spammer@remotehost.com test@somewhere.org localhost - Reject/RCPT
+127.0.0.1 test@yourdomain.com test@somewhere.org localhost - Reject
+127.0.0.1 test@yourdomain.com test@somewhere.org localhost samplemessage.txt Accept
