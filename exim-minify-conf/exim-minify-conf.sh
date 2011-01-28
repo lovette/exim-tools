@@ -61,6 +61,12 @@ function usage()
 	exit 0
 }
 
+function onexit()
+{
+	[ -f "$TMPINFILE" ] && /bin/rm -f "$TMPINFILE"
+	[ -f "$TMPOUTFILE" ] && /bin/rm -f "$TMPOUTFILE"
+}
+
 ##########################################################################
 # Main
 
@@ -119,7 +125,7 @@ TMPINFILE=$(mktemp -t "$TMPFILESPEC") || exit 1
 TMPOUTFILE=$(mktemp -t "$TMPFILESPEC") || exit 1
 
 # Remove temp files on exit
-trap "/bin/rm -f $TMPINFILE $TMPOUTFILE" EXIT
+trap "onexit" EXIT
 
 cat "$INFILE" > "$TMPINFILE"
 [ $? -ne 0 ] &&	echo "An error occured" && exit 1
