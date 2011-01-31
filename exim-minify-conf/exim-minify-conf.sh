@@ -112,7 +112,7 @@ if [ -z "$OUTFILE" ]; then
 fi
 
 # Confirm we can write to OUTFILE
-if [ "$OUTFILE" != "-" ]; then
+if [ "$OUTFILE" != "-" ] && [ -e "$OUTFILE" ]; then
 	[ -d "$OUTFILE" ] && echo "$OUTFILE: output path cannot be a directory" && exit 1
 	[ ! -w "$OUTFILE" ] && echo "$OUTFILE: cannot write to file" && exit 1
 fi
