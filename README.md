@@ -3,6 +3,15 @@
 A collection of tools for the [Exim Mail Transfer Agent](http://www.exim.org/)
 
 
+Tools
+---
+* [exim-hup](https://github.com/lovette/exim-tools/tree/master/exim-hup)
+* [exim-minify-conf](https://github.com/lovette/exim-tools/tree/master/exim-minify-conf)
+* [exim-run-acl-tests](https://github.com/lovette/exim-tools/tree/master/exim-run-acl-tests)
+* [exim-test-session](https://github.com/lovette/exim-tools/tree/master/exim-test-session)
+* [exim-tidyall](https://github.com/lovette/exim-tools/tree/master/exim-tidyall)
+
+
 Requirements
 ---
 
